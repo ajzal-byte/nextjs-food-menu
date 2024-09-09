@@ -8,46 +8,8 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-
-// IngredientSelector Component
-const IngredientSelector: React.FC<IngredientSelectorProps> = ({
-  ingredients,
-  onChange,
-}) => {
-  console.log("INGREDIENTS: " ,ingredients);
-
-  return (
-    <div className="space-y-2">
-      {ingredients.map((ingredient) => (
-        <div key={ingredient} className="flex items-center space-x-2">
-          <Checkbox
-            id={ingredient}
-            onCheckedChange={(checked) => onChange(ingredient, !!checked)}
-          />
-          <Label htmlFor={ingredient}>{ingredient}</Label>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-// QuantitySelector Component
-const QuantitySelector: React.FC<QuantitySelectorProps> = ({
-  quantity,
-  onIncrease,
-  onDecrease,
-}) => (
-  <div className="flex items-center space-x-2">
-    <Button variant="outline" size="icon" onClick={onDecrease}>
-      -
-    </Button>
-    <span className="text-lg font-semibold">{quantity}</span>
-    <Button variant="outline" size="icon" onClick={onIncrease}>
-      +
-    </Button>
-  </div>
-);
+import IngredientSelector from "./IngredientSelector";
+import QuantitySelector from "./QuantitySelector";
 
 const FoodDialog: React.FC<FoodDialogProps> = ({ foodItem }) => {
   const [quantity, setQuantity] = useState<number>(1);
