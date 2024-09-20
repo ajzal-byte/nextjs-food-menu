@@ -5,6 +5,7 @@ interface FoodItem {
   description: string;
   image: string;
   ingredients: string[];
+  category: string;
 }
 
 interface FoodDialogProps {
@@ -15,6 +16,7 @@ interface FoodCardProps {
   image: string;
   title: string;
   description: string;
+  category: string;
 }
 
 interface IngredientSelectorProps {

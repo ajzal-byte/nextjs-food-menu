@@ -5,7 +5,6 @@ const IngredientSelector: React.FC<IngredientSelectorProps> = ({
   ingredients,
   onChange,
 }) => {
-  console.log("INGREDIENTS: ", ingredients);
 
   return (
     <div className="space-y-2">
