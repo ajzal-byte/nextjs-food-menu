@@ -27,7 +27,7 @@ const FoodCard: React.FC<FoodCardProps> = ({
       style={{
         borderRadius: "12px",
       }}
-      className="flex max-w-[270px] flex-col overflow-hidden bg-[#d6e5d8] rounded-lg shadow-lg cursor-pointer hover:shadow-xl"
+      className="flex w-full sm:max-w-[270px] flex-col overflow-hidden bg-[#d6e5d8] rounded-lg shadow-lg cursor-pointer hover:shadow-xl"
     >
       <DialogImage
         src={image}
