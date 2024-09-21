@@ -1,20 +1,24 @@
+"use client";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Link } from 'next-view-transitions'
-import { UtensilsCrossed } from "lucide-react";
+import { Link } from "next-view-transitions";
+import { UtensilsIcon } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   const links = [
     { title: "Home", href: "/" },
-    { title: "About", href: "/about" },
     { title: "Menu", href: "/menu" },
-    { title: "Contact", href: "/contact" },
+    { title: "About", href: pathname === "/menu" ? "/#about" : "#about" },
+    { title: "Contact", href: pathname === "/menu" ? "/#contact" : "#contact" },
   ];
 
   return (
     <header className="bg-[#d6e5d8] flex h-20 w-full shrink-0 items-center justify-between px-4 md:px-6">
       <Link href="/" className="mr-6 hidden lg:flex" prefetch={false}>
-        <UtensilsCrossed className="h-8 w-8 text-[#343d37]" />
+        <UtensilsIcon className="h-8 w-8 text-[#343d37]" />
         <span className="sr-only">Next.js Cuisine</span>
       </Link>
 
