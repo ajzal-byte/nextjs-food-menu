@@ -1,3 +1,4 @@
+import BackToTopButton from "@/components/BackToTopButton";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -169,6 +170,7 @@ export default function Home() {
           </Link>
         </nav>
       </footer>
+      <BackToTopButton />
     </div>
   );
 }
