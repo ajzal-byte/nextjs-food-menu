@@ -1,6 +1,7 @@
 import BackToTopButton from "@/components/BackToTopButton";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { TextEffect } from "@/components/ui/mp-textEffect";
 import { Textarea } from "@/components/ui/textarea";
 import Link from "next/link";
 
@@ -19,10 +20,15 @@ export default function Home() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
                 Discover the Flavors of Verge Restaurant
               </h1>
-              <p className="text-lg sm:text-xl text-white">
+              <TextEffect
+                className="text-white text-lg sm:text-xl"
+                per="char"
+                preset="fade"
+                handleSpecialWords
+              >
                 Experience our exquisite cuisine and warm hospitality in the
                 heart of the city.
-              </p>
+              </TextEffect>
               <Link
                 href="#"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
@@ -33,7 +39,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="menu" className="w-full py-12 md:py-24 lg:py-32 bg-[#E3E8D3]">
+        <section
+          id="menu"
+          className="w-full py-12 md:py-24 lg:py-32 bg-[#E3E8D3]"
+        >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -119,7 +128,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-[#E3E8D3]">
+        <section
+          id="contact"
+          className="w-full py-12 md:py-24 lg:py-32 bg-[#E3E8D3]"
+        >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
