@@ -6,6 +6,10 @@ interface FoodItem {
   image: string;
   ingredients: string[];
   category: string;
+  customization: {
+    label: string;
+    options: string[];
+  }[];
 }
 
 interface FoodDialogProps {
@@ -17,6 +21,10 @@ interface FoodCardProps {
   title: string;
   description: string;
   category: string;
+  customization: {
+    label: string;
+    options: string[];
+  }[];
 }
 
 interface IngredientSelectorProps {
