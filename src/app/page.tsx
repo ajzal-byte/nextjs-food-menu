@@ -58,7 +58,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <img
+              <Image
                 src="https://images.pexels.com/photos/313700/pexels-photo-313700.jpeg?auto=compress&cs=tinysrgb&w=600"
                 width="550"
                 height="310"
@@ -120,7 +120,7 @@ export default function Home() {
                   Learn More
                 </Link>
               </div>
-              <img
+              <Image
                 src="https://images.pexels.com/photos/4921018/pexels-photo-4921018.jpeg?auto=compress&cs=tinysrgb&w=600"
                 width="550"
                 height="310"
@@ -157,7 +157,7 @@ export default function Home() {
                   className="max-w-lg flex-1"
                 />
                 <Textarea placeholder="Message" className="max-w-lg flex-1" />
-                <Button type="submit">Submit</Button>
+                <Button type="button">Submit</Button>
               </form>
             </div>
           </div>
