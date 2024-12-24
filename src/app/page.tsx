@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { TextEffect } from "@/components/ui/mp-textEffect";
 import { Textarea } from "@/components/ui/textarea";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -10,7 +11,8 @@ export default function Home() {
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
         <section className="w-full h-[100vh] relative overflow-hidden">
-          <img
+          <Image
+            fill
             src="https://images.pexels.com/photos/601169/pexels-photo-601169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Hero Image"
             className="absolute inset-0 w-full h-full object-cover"
@@ -139,7 +141,7 @@ export default function Home() {
                   Get in Touch
                 </h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Have a question or want to make a reservation? Don't hesitate
+                  Have a question or want to make a reservation? Don&apos;t hesitate
                   to reach out to us.
                 </p>
               </div>
